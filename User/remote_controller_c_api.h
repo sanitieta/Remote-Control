@@ -5,8 +5,9 @@
 extern "C" {
 #endif
 #include <stdint.h>
+#include "stm32f4xx_hal.h"
 // 初始化遥控器
-void RemoteController_Init(void);
+void RemoteController_Init(UART_HandleTypeDef* huart_);
 
 #ifdef __cplusplus
 }

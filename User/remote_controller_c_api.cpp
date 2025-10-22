@@ -1,9 +1,9 @@
 #include "remote_controller_c_api.h"
 #include "RemoteController.h"
 
-static RemoteController remoteController;
+RemoteController remoteController;
 
-void RemoteController_Init(void) {
-    remoteController.init();
+void RemoteController_Init(UART_HandleTypeDef *huart_) {
+    remoteController.init(huart_);
 }
 
